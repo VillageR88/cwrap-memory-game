@@ -42,6 +42,17 @@
             {
               "element": "cwrap-template",
               "text": "cwrapTemplate[fieldset(inputNumber=2,legend=Grid Size,name=grid-size,la1=4x4,la2=6x6,gap=30px)]"
+            },
+            {
+              "element": "button",
+              "text": "Start Game",
+              "extend": [
+                {
+                  "extension": ":hover",
+                  "style": "background-color: #FFB84A;"
+                }
+              ],
+              "style": "background-color: #FDA214; border: none; border-radius: 35px; color: #FCFCFC; cursor: pointer; font-family: Atkinson Hyperlegible, serif; font-size: 32px; font-weight: bold; min-height: 70px; transition: 300ms;"
             }
           ]
         }
