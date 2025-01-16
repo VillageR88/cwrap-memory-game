@@ -29,52 +29,15 @@
         },
         {
           "element": "form",
-          "style": "background-color: #FCFCFC; border-radius: 20px; box-sizing: border-box; min-height: 559px; padding: 56px; width: 100%;",
+          "style": "background-color: #FCFCFC; border-radius: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px; min-height: 559px; padding: 56px; width: 100%;",
           "children": [
             {
-              "element": "fieldset",
-              "style": "border: none; box-sizing: border-box; display: flex; flex-direction: column; margin: 0; min-height: 93px; padding: 0;",
-              "children": [
-                {
-                  "element": "legend",
-                  "text": "Select Theme"
-                },
-                {
-                  "element": "ul",
-                  "style": "box-sizing: border-box; display: flex; justify-content: space-between; list-style: none; margin: 0; margin-top: 16px; min-height: 52px; padding: 0; width: 100%;",
-                  "blueprint": {
-                    "count": "2",
-                    "element": "li",
-                    "style": "display: flex; max-width: 256px; width: 100%;",
-                    "children": [
-                      {
-                        "extend": [
-                          {
-                            "extension": ":has(input:checked)",
-                            "style": "background-color: #304859;"
-                          },
-                          {
-                            "extension": ":hover",
-                            "style": "background-color: #6395B8;"
-                          }
-                        ],
-                        "style": "background-color: #BCCED9; border-radius: 26px; display: flex; position: relative; transition: 300ms; width: 100%;",
-                        "element": "label",
-                        "children": [
-                          {
-                            "element": "input",
-                            "attributes": {
-                              "type": "radio",
-                              "name": "theme"
-                            },
-                            "style": "appearance: none; border-radius: 26px; cursor: pointer; display: flex; height: 100%; margin: 0; position: absolute; width: 100%;"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                }
-              ]
+              "element": "cwrap-template",
+              "text": "cwrapTemplate[fieldset(inputNumber=2,legend=Select Theme,name=theme,la1=Numbers,la2=Icons,gap=30px)]"
+            },
+            {
+              "element": "cwrap-template",
+              "text": "cwrapTemplate[fieldset(inputNumber=4,legend=Numbers of Players,name=number-of-player,la1=1,la2=2,la3=3,la4=4,gap=22px)]"
             }
           ]
         }

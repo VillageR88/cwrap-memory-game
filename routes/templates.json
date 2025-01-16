@@ -1,1 +1,50 @@
-[]
+[
+    {
+        "element": "fieldset",
+        "name": "fieldset",
+        "style": "border: none; box-sizing: border-box; display: flex; flex-direction: column; margin: 0; min-height: 93px; padding: 0;",
+        "children": [
+            {
+                "element": "legend",
+                "text": "cwrapProperty[legend=xyz]"
+            },
+            {
+                "element": "ul",
+                "style": "box-sizing: border-box; display: flex; justify-content: space-between; list-style: none; margin: 0; margin-top: 16px; min-height: 52px; padding: 0; width: 100%; gap: cwrapProperty[gap=cwrapOmit];",
+                "blueprint": {
+                    "count": "cwrapProperty[inputNumber=cwrapOmit]",
+                    "element": "li",
+                    "style": "display: flex; width: 100%;",
+                    "children": [
+                        {
+                            "extend": [
+                                {
+                                    "extension": ":has(input:checked)",
+                                    "style": "background-color: #304859;"
+                                },
+                                {
+                                    "extension": ":hover",
+                                    "style": "background-color: #6395B8;"
+                                }
+                            ],
+                            "style": "align-items: center; font-weight: bold; font-size: 26px; background-color: #BCCED9; border-radius: 26px; display: flex; display: flex; justify-content: center; position: relative; transition: 300ms; width: 100%;",
+                            "element": "label",
+                            "text": "cwrapArray[cwrapProperty[la1=la1],cwrapProperty[la2=la2],cwrapProperty[la3=la3],cwrapProperty[la4=la4]]",
+                            "children": [
+                                {
+                                    "element": "input",
+                                    "attributes": {
+                                        "checked": "cwrapArray[,cwrapOmit,cwrapOmit,cwrapOmit]",
+                                        "type": "radio",
+                                        "name": "cwrapProperty[name=cwrapPlaceholder]"
+                                    },
+                                    "style": "appearance: none; border-radius: 26px; cursor: pointer; display: flex; height: 100%; margin: 0; position: absolute; width: 100%;"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]
