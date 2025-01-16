@@ -1,0 +1,36 @@
+{
+  "head": {
+    "title": "New Candy Wrapper project",
+    "link": [
+      {
+        "rel": "stylesheet",
+        "href": "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap",
+        "type": "text/css"
+      }
+    ],
+    "meta": [
+      {
+        "name": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "charset": "UTF-8"
+      },
+      {
+        "name": "description",
+        "content": "New Candy Wrapper project."
+      },
+      {
+        "name": "keywords",
+        "content": ""
+      }
+    ]
+  },
+  "classroom": [
+    {
+      "name": "h1",
+      "type": "element",
+      "style": "font-size: 40px; font-weight: bold; margin: 0;"
+    }
+  ]
+}

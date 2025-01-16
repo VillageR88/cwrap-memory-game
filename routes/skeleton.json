@@ -1,31 +1,84 @@
 {
   "head": {
-    "title": "New Candy Wrapper project",
     "link": [
       {
         "rel": "shortcut icon",
         "href": "favicon.ico",
         "type": "image/x-icon"
       }
-    ],
-    "meta": [
-      {
-        "name": "viewport",
-        "content": "width=device-width, initial-scale=1.0"
-      },
-      {
-        "charset": "UTF-8"
-      },
-      {
-        "name": "description",
-        "content": "New Candy Wrapper project."
-      },
-      {
-        "name": "keywords",
-        "content": ""
-      }
     ]
   },
+  "classroom": [
+    {
+      "name": "legend",
+      "type": "element",
+      "style": "color: #7191A5; font-size: 20px; font-weight: bold; padding-inline: unset;"
+    }
+  ],
   "element": "body",
-  "style": "background-color: #152938; box-sizing: border-box; margin: 0; min-height: 100dvh; padding: 0;"
+  "style": "align-items: center; background-color: #152938; box-sizing: border-box; display: flex; font-family: Atkinson Hyperlegible, serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 40px;",
+  "children": [
+    {
+      "element": "main",
+      "style": "align-items: center; color: white; display: flex; flex-direction: column; max-width: 654px; min-height: 687px; width: 100%;",
+      "children": [
+        {
+          "element": "h1",
+          "text": "memory",
+          "style": "margin-bottom: 78px;"
+        },
+        {
+          "element": "form",
+          "style": "background-color: #FCFCFC; border-radius: 20px; box-sizing: border-box; min-height: 559px; padding: 56px; width: 100%;",
+          "children": [
+            {
+              "element": "fieldset",
+              "style": "border: none; box-sizing: border-box; display: flex; flex-direction: column; margin: 0; min-height: 93px; padding: 0;",
+              "children": [
+                {
+                  "element": "legend",
+                  "text": "Select Theme"
+                },
+                {
+                  "element": "ul",
+                  "style": "box-sizing: border-box; display: flex; justify-content: space-between; list-style: none; margin: 0; margin-top: 16px; min-height: 52px; padding: 0; width: 100%;",
+                  "blueprint": {
+                    "count": "2",
+                    "element": "li",
+                    "style": "display: flex; max-width: 256px; width: 100%;",
+                    "children": [
+                      {
+                        "extend": [
+                          {
+                            "extension": ":has(input:checked)",
+                            "style": "background-color: #304859;"
+                          },
+                          {
+                            "extension": ":hover",
+                            "style": "background-color: #6395B8;"
+                          }
+                        ],
+                        "style": "background-color: #BCCED9; border-radius: 26px; display: flex; position: relative; transition: 300ms; width: 100%;",
+                        "element": "label",
+                        "children": [
+                          {
+                            "element": "input",
+                            "attributes": {
+                              "type": "radio",
+                              "name": "theme"
+                            },
+                            "style": "appearance: none; border-radius: 26px; cursor: pointer; display: flex; height: 100%; margin: 0; position: absolute; width: 100%;"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
