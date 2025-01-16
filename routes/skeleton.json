@@ -38,6 +38,10 @@
             {
               "element": "cwrap-template",
               "text": "cwrapTemplate[fieldset(inputNumber=4,legend=Numbers of Players,name=number-of-player,la1=1,la2=2,la3=3,la4=4,gap=22px)]"
+            },
+            {
+              "element": "cwrap-template",
+              "text": "cwrapTemplate[fieldset(inputNumber=2,legend=Grid Size,name=grid-size,la1=4x4,la2=6x6,gap=30px)]"
             }
           ]
         }
