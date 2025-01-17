@@ -37,7 +37,7 @@
             },
             {
               "element": "cwrap-template",
-              "text": "cwrapTemplate[fieldset(inputNumber=4,legend=Numbers of Players,checkboxes=players,gap=22px)]"
+              "text": "cwrapTemplate[fieldset(inputNumber=4,legend=Numbers of Players,name=players,checkboxes=players,gap=22px)]"
             },
             {
               "element": "cwrap-template",
