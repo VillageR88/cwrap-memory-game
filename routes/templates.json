@@ -27,7 +27,7 @@
                                     "style": "background-color: #6395B8;"
                                 }
                             ],
-                            "style": "align-items: center; font-weight: bold; font-size: 26px; color: #FCFCFC; background-color: #BCCED9; border-radius: 26px; display: flex; display: flex; justify-content: center; position: relative; transition: 300ms; width: 100%;",
+                            "style": "align-items: center; font-weight: bold; font-size: 26px; color: #FCFCFC; background-color: #BCCED9; border-radius: 26px; display: flex; justify-content: center; position: relative; transition: 300ms; width: 100%; text-transform: capitalize;",
                             "element": "label",
                             "text": "cwrapGlobal[cwrapProperty[checkboxes=cwrapOmit].cwrapIndex]",
                             "children": [

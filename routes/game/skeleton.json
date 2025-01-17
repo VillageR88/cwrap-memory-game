@@ -1,0 +1,33 @@
+{
+  "head": {
+    "link": [
+      {
+        "rel": "shortcut icon",
+        "href": "favicon.ico",
+        "type": "image/x-icon"
+      }
+    ]
+  },
+  "classroom": [
+    {
+      "name": "legend",
+      "type": "element",
+      "style": "color: #7191A5; font-size: 20px; font-weight: bold; padding-inline: unset;"
+    }
+  ],
+  "element": "body",
+  "style": "align-items: center; background-color: #152938; box-sizing: border-box; display: flex; font-family: Atkinson Hyperlegible, serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 40px;",
+  "children": [
+    {
+      "element": "main",
+      "style": "align-items: center; color: white; display: flex; flex-direction: column; max-width: 654px; min-height: 687px; width: 100%;",
+      "children": [
+        {
+          "element": "h1",
+          "text": "memory",
+          "style": "margin-bottom: 78px;"
+        }
+      ]
+    }
+  ]
+}
