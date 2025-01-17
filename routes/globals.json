@@ -32,5 +32,21 @@
       "type": "element",
       "style": "font-size: 40px; font-weight: bold; margin: 0;"
     }
-  ]
+  ],
+  "const": {
+    "theme": [
+      "numbers",
+      "icons"
+    ],
+    "players": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "sizes": [
+      "4x4",
+      "6x6"
+    ]
+  }
 }

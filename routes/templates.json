@@ -12,7 +12,7 @@
                 "element": "ul",
                 "style": "box-sizing: border-box; display: flex; justify-content: space-between; list-style: none; margin: 0; margin-top: 16px; min-height: 52px; padding: 0; width: 100%; gap: cwrapProperty[gap=cwrapOmit];",
                 "blueprint": {
-                    "count": "cwrapProperty[inputNumber=cwrapOmit]",
+                    "count": "cwrapProperty[inputNumber=2]",
                     "element": "li",
                     "style": "display: flex; width: 100%;",
                     "children": [
@@ -29,7 +29,7 @@
                             ],
                             "style": "align-items: center; font-weight: bold; font-size: 26px; color: #FCFCFC; background-color: #BCCED9; border-radius: 26px; display: flex; display: flex; justify-content: center; position: relative; transition: 300ms; width: 100%;",
                             "element": "label",
-                            "text": "cwrapArray[cwrapProperty[la1=la1],cwrapProperty[la2=la2],cwrapProperty[la3=la3],cwrapProperty[la4=la4]]",
+                            "text": "cwrapGlobal[cwrapProperty[checkboxes=cwrapOmit].cwrapIndex]",
                             "children": [
                                 {
                                     "element": "input",
