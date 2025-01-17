@@ -30,7 +30,8 @@
         {
           "element": "form",
           "attributes": {
-            "action": "game"
+            "action": "game",
+            "id": "menu-form"
           },
           "style": "background-color: #FCFCFC; border-radius: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px; min-height: 559px; padding: 56px; width: 100%;",
           "children": [
@@ -60,6 +61,12 @@
           ]
         }
       ]
+    },
+    {
+      "element": "script",
+      "attributes": {
+        "src": "static/scripts/home.js"
+      }
     }
   ]
 }

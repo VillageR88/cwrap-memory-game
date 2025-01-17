@@ -36,7 +36,8 @@
                                     "attributes": {
                                         "checked": "cwrapArray[,cwrapOmit,cwrapOmit,cwrapOmit]",
                                         "type": "radio",
-                                        "name": "cwrapProperty[name=cwrapPlaceholder]"
+                                        "name": "cwrapProperty[name=cwrapPlaceholder]",
+                                        "value": "cwrapGlobal[cwrapProperty[checkboxes=cwrapOmit].cwrapIndex]"
                                     },
                                     "style": "appearance: none; border-radius: 26px; cursor: pointer; display: flex; height: 100%; margin: 0; position: absolute; width: 100%;"
                                 }
