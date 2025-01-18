@@ -5,6 +5,10 @@
         "rel": "shortcut icon",
         "href": "../favicon.ico",
         "type": "image/x-icon"
+      },
+      {
+        "rel": "prefetch",
+        "href": "../"
       }
     ]
   },
@@ -15,116 +19,116 @@
       "style": "color: #7191A5; font-size: 20px; font-weight: bold; padding-inline: unset;"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button",
+      "name": "body > main > div:nth-of-type(1) > button",
       "type": "custom",
       "style": "background-color: #304859; border-radius: 50%; box-sizing: border-box; color: #FCFCFC; flex-grow: 1; font-size: 56px; font-weight: bold; padding: 0; transition: 300ms;"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button:hover",
+      "name": "body > main > div:nth-of-type(1) > button:hover",
       "type": "custom",
       "style": "background-color: #6395B8;"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button.clicked",
+      "name": "body > main > div:nth-of-type(1) > button.clicked",
       "type": "custom",
       "style": "background-color: #FDA214; transition: 150ms;"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button.found",
+      "name": "body > main > div:nth-of-type(1) > button.found",
       "type": "custom",
       "style": "background-color: #BCCED9;"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._1:before",
+      "name": "body > main > div:nth-of-type(1) > button._1:before",
       "type": "custom",
       "style": "color: white; content: \"1\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._2:before",
+      "name": "body > main > div:nth-of-type(1) > button._2:before",
       "type": "custom",
       "style": "color: white; content: \"2\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._3:before",
+      "name": "body > main > div:nth-of-type(1) > button._3:before",
       "type": "custom",
       "style": "color: white; content: \"3\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._4:before",
+      "name": "body > main > div:nth-of-type(1) > button._4:before",
       "type": "custom",
       "style": "color: white; content: \"4\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._5:before",
+      "name": "body > main > div:nth-of-type(1) > button._5:before",
       "type": "custom",
       "style": "color: white; content: \"5\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._6:before",
+      "name": "body > main > div:nth-of-type(1) > button._6:before",
       "type": "custom",
       "style": "color: white; content: \"6\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._7:before",
+      "name": "body > main > div:nth-of-type(1) > button._7:before",
       "type": "custom",
       "style": "color: white; content: \"7\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._8:before",
+      "name": "body > main > div:nth-of-type(1) > button._8:before",
       "type": "custom",
       "style": "color: white; content: \"8\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._9:before",
+      "name": "body > main > div:nth-of-type(1) > button._9:before",
       "type": "custom",
       "style": "color: white; content: \"9\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._10:before",
+      "name": "body > main > div:nth-of-type(1) > button._10:before",
       "type": "custom",
       "style": "color: white; content: \"10\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._11:before",
+      "name": "body > main > div:nth-of-type(1) > button._11:before",
       "type": "custom",
       "style": "color: white; content: \"11\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._12:before",
+      "name": "body > main > div:nth-of-type(1) > button._12:before",
       "type": "custom",
       "style": "color: white; content: \"12\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._13:before",
+      "name": "body > main > div:nth-of-type(1) > button._13:before",
       "type": "custom",
       "style": "color: white; content: \"13\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._14:before",
+      "name": "body > main > div:nth-of-type(1) > button._14:before",
       "type": "custom",
       "style": "color: white; content: \"14\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._15:before",
+      "name": "body > main > div:nth-of-type(1) > button._15:before",
       "type": "custom",
       "style": "color: white; content: \"15\";"
     },
     {
-      "name": "body > main > div:nth-of-type(2) > button._16:before",
+      "name": "body > main > div:nth-of-type(1) > button._16:before",
       "type": "custom",
       "style": "color: white; content: \"16\";"
     }
   ],
   "element": "body",
-  "style": "align-items: center; background-color: #FCFCFC; box-sizing: border-box; display: flex; font-family: Atkinson Hyperlegible, serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 40px;",
+  "style": "align-items: center; background-color: #FCFCFC; box-sizing: border-box; display: flex; flex-direction: column; font-family: Atkinson Hyperlegible, serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 40px;",
   "children": [
     {
-      "element": "main",
-      "style": "color: white; display: flex; flex-direction: column; max-width: 1110px; min-height: 992px; width: 100%;",
+      "element": "nav",
+      "style": "display: flex; width: 100%;",
       "children": [
         {
           "element": "div",
-          "style": "align-items: center; display: flex; justify-content: space-between; width: 100%;",
+          "style": "align-items: center; display: flex; justify-content: space-between; margin-inline: auto; max-width: 1110px; width: 100%;",
           "children": [
             {
               "element": "h1",
@@ -138,7 +142,13 @@
                 {
                   "element": "button",
                   "text": "Restart",
-                  "style": "background-color: #FDA214; border-radius: 26px; color: #FCFCFC; cursor: pointer; font-family: Atkinson Hyperlegible, serif; font-size: 20px; font-weight: bold; max-width: 127px; min-height: 52px; width: 100%;"
+                  "extend": [
+                    {
+                      "extension": ":hover",
+                      "style": "background-color: #FFB84A;"
+                    }
+                  ],
+                  "style": "background-color: #FDA214; border-radius: 26px; color: #FCFCFC; cursor: pointer; font-family: Atkinson Hyperlegible, serif; font-size: 20px; font-weight: bold; max-width: 127px; min-height: 52px; transition: 300ms; width: 100%;"
                 },
                 {
                   "element": "button",
@@ -146,12 +156,24 @@
                     "id": "new-game"
                   },
                   "text": "New Game",
-                  "style": "background-color: #DFE7EC; border-radius: 26px; color: #304859; cursor: pointer; font-family: Atkinson Hyperlegible, serif; font-size: 20px; font-weight: bold; max-width: 149px; min-height: 52px; width: 100%;"
+                  "extend": [
+                    {
+                      "extension": ":hover",
+                      "style": "background-color: #6395B8; color: #FCFCFC;"
+                    }
+                  ],
+                  "style": "background-color: #DFE7EC; border-radius: 26px; color: #304859; cursor: pointer; font-family: Atkinson Hyperlegible, serif; font-size: 20px; font-weight: bold; max-width: 149px; min-height: 52px; transition: 300ms; width: 100%;"
                 }
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "element": "main",
+      "style": "color: white; display: flex; flex-direction: column; max-width: 1110px; width: 100%;",
+      "children": [
         {
           "element": "div",
           "style": "display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); height: 523px; margin: 105px auto 122px auto; max-width: 532px; width: 100%;",
@@ -163,8 +185,37 @@
       ]
     },
     {
+      "element": "footer",
+      "style": "min-height: 130px; width: 100%;",
+      "children": [
+        {
+          "element": "div",
+          "extend": [
+            {
+              "extension": "> div",
+              "style": "align-items: center; background-color: #DFE7EC; border-radius: 10px; box-sizing: border-box; display: flex; height: 72px; justify-content: space-between; max-width: 255px; padding: 17px 24px 15px 21px; width: 100%;"
+            },
+            {
+              "extension": "> div > h2:nth-of-type(1)",
+              "style": "color: #7191A5; font-size: 18px; font-weight: bold; margin: 0;"
+            },
+            {
+              "extension": "> div > p:nth-of-type(1)",
+              "style": "color: #304859; font-size: 32px; font-weight: bold; margin: 0;"
+            },
+            {
+              "extension": "> div > svg",
+              "style": "fill: red;"
+            }
+          ],
+          "style": "align-items: center; display: flex; gap: 30px; justify-content: center; margin-inline: auto; max-width: 1110px; width: 100%;"
+        }
+      ]
+    },
+    {
       "element": "script",
       "attributes": {
+        "type": "module",
         "src": "../static/scripts/game.js"
       }
     }
