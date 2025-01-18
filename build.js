@@ -2,8 +2,8 @@ const mkdirp = require("mkdirp");
 const fs = require("fs-extra");
 const path = require("node:path");
 const { JSDOM } = require("jsdom");
+const { exec } = require("node:child_process");
 const { document } = new JSDOM().window;
-
 const constMap = new Map();
 const cssMap = new Map();
 const mediaQueriesMap = new Map();
@@ -884,10 +884,10 @@ function main() {
     if (!isDevelopment) console.log(`Created build directory ${buildDir}`);
   }
 
-  // Copy the static folder to the build directory if it exists, omitting the "typescript" folder
+  // Copy the static folder to the build directory if it exists, omitting ".ts" files
   const staticDir = path.join("static");
   if (fs.existsSync(staticDir)) {
-    const copyDirectoryOmittingTypescript = (source, destination) => {
+    const copyDirectoryOmittingTsFiles = (source, destination) => {
       if (!fs.existsSync(destination)) {
         mkdirp.sync(destination);
         if (!isDevelopment) console.log(`Created directory ${destination}`);
@@ -900,7 +900,7 @@ function main() {
         }
 
         for (const file of files) {
-          if (file === "typescript") continue; // Omit the "typescript" folder
+          if (file.endsWith(".ts")) continue; // Omit ".ts" files
 
           const sourcePath = path.join(source, file);
           const destinationPath = path.join(destination, file);
@@ -912,7 +912,7 @@ function main() {
             }
 
             if (stats.isDirectory()) {
-              copyDirectoryOmittingTypescript(sourcePath, destinationPath);
+              copyDirectoryOmittingTsFiles(sourcePath, destinationPath);
             } else {
               copyFile(sourcePath, destinationPath);
             }
@@ -921,7 +921,7 @@ function main() {
       });
     };
 
-    copyDirectoryOmittingTypescript(staticDir, path.join(buildDir, "static"));
+    copyDirectoryOmittingTsFiles(staticDir, path.join(buildDir, "static"));
   } else {
     console.warn(`Warning: Static directory ${staticDir} does not exist.`);
   }
@@ -1414,3 +1414,22 @@ function generateCssSelector(
     }
   }
 }
+
+const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
+if (!packageJson.devDependencies?.typescript) {
+  process.exit(0);
+}
+
+exec(
+  `npm run ${isDevelopment ? "compile:dev" : "compile:prod"}`,
+  (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error executing npm run: ${error.message}`);
+      return;
+    }
+    if (stderr) {
+      console.error(`stderr: ${stderr}`);
+      return;
+    }
+  }
+);

@@ -36,6 +36,11 @@
       "name": "h1",
       "type": "element",
       "style": "font-size: 40px; font-weight: bold; margin: 0;"
+    },
+    {
+      "name": "button",
+      "type": "element",
+      "style": "border: none; cursor: pointer;"
     }
   ],
   "const": {

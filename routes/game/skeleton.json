@@ -16,18 +16,66 @@
     }
   ],
   "element": "body",
-  "style": "align-items: center; background-color: #152938; box-sizing: border-box; display: flex; font-family: Atkinson Hyperlegible, serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 40px;",
+  "style": "align-items: center; background-color: #FCFCFC; box-sizing: border-box; display: flex; font-family: Atkinson Hyperlegible, serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 40px;",
   "children": [
     {
       "element": "main",
-      "style": "align-items: center; color: white; display: flex; flex-direction: column; max-width: 654px; min-height: 687px; width: 100%;",
+      "style": "color: white; display: flex; flex-direction: column; max-width: 1110px; min-height: 992px; width: 100%;",
       "children": [
         {
-          "element": "h1",
-          "text": "memory",
-          "style": "margin-bottom: 78px;"
+          "element": "div",
+          "style": "align-items: center; display: flex; justify-content: space-between; width: 100%;",
+          "children": [
+            {
+              "element": "h1",
+              "text": "memory",
+              "style": "color: #152938;"
+            },
+            {
+              "element": "div",
+              "style": "display: flex; gap: 16px; max-width: 292px; width: 100%;",
+              "children": [
+                {
+                  "element": "button",
+                  "text": "Restart",
+                  "style": "background-color: #FDA214; border-radius: 26px; color: #FCFCFC; cursor: pointer; font-family: Atkinson Hyperlegible, serif; font-size: 20px; font-weight: bold; max-width: 127px; min-height: 52px; width: 100%;"
+                },
+                {
+                  "element": "button",
+                  "attributes": {
+                    "id": "new-game"
+                  },
+                  "text": "New Game",
+                  "style": "background-color: #DFE7EC; border-radius: 26px; color: #304859; cursor: pointer; font-family: Atkinson Hyperlegible, serif; font-size: 20px; font-weight: bold; max-width: 149px; min-height: 52px; width: 100%;"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "div",
+          "style": "display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); height: 523px; margin: 105px auto 122px auto; max-width: 532px; width: 100%;",
+          "extend": [
+            {
+              "extension": "> button",
+              "style": "background-color: #304859; border-radius: 50%; flex-grow: 1; padding: 0; transition: 300ms;"
+            },
+            {
+              "extension": "> button:hover",
+              "style": "background-color: #6395B8;"
+            }
+          ],
+          "attributes": {
+            "id": "board"
+          }
         }
       ]
+    },
+    {
+      "element": "script",
+      "attributes": {
+        "src": "../static/scripts/game.js"
+      }
     }
   ]
 }

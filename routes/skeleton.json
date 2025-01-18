@@ -56,7 +56,7 @@
                   "style": "background-color: #FFB84A;"
                 }
               ],
-              "style": "background-color: #FDA214; border: none; border-radius: 35px; color: #FCFCFC; cursor: pointer; font-family: Atkinson Hyperlegible, serif; font-size: 32px; font-weight: bold; min-height: 70px; transition: 300ms;"
+              "style": "background-color: #FDA214; border: none; border-radius: 35px; color: #FCFCFC; font-family: Atkinson Hyperlegible, serif; font-size: 32px; font-weight: bold; min-height: 70px; transition: 300ms;"
             }
           ]
         }
@@ -65,7 +65,7 @@
     {
       "element": "script",
       "attributes": {
-        "src": "static/scripts/home.js"
+        "src": "./static/scripts/home.js"
       }
     }
   ]
