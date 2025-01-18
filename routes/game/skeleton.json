@@ -3,7 +3,7 @@
     "link": [
       {
         "rel": "shortcut icon",
-        "href": "favicon.ico",
+        "href": "../favicon.ico",
         "type": "image/x-icon"
       }
     ]
@@ -13,6 +13,106 @@
       "name": "legend",
       "type": "element",
       "style": "color: #7191A5; font-size: 20px; font-weight: bold; padding-inline: unset;"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button",
+      "type": "custom",
+      "style": "background-color: #304859; border-radius: 50%; box-sizing: border-box; color: #FCFCFC; flex-grow: 1; font-size: 56px; font-weight: bold; padding: 0; transition: 300ms;"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button:hover",
+      "type": "custom",
+      "style": "background-color: #6395B8;"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button.clicked",
+      "type": "custom",
+      "style": "background-color: #FDA214; transition: 150ms;"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button.found",
+      "type": "custom",
+      "style": "background-color: #BCCED9;"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._1:before",
+      "type": "custom",
+      "style": "color: white; content: \"1\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._2:before",
+      "type": "custom",
+      "style": "color: white; content: \"2\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._3:before",
+      "type": "custom",
+      "style": "color: white; content: \"3\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._4:before",
+      "type": "custom",
+      "style": "color: white; content: \"4\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._5:before",
+      "type": "custom",
+      "style": "color: white; content: \"5\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._6:before",
+      "type": "custom",
+      "style": "color: white; content: \"6\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._7:before",
+      "type": "custom",
+      "style": "color: white; content: \"7\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._8:before",
+      "type": "custom",
+      "style": "color: white; content: \"8\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._9:before",
+      "type": "custom",
+      "style": "color: white; content: \"9\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._10:before",
+      "type": "custom",
+      "style": "color: white; content: \"10\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._11:before",
+      "type": "custom",
+      "style": "color: white; content: \"11\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._12:before",
+      "type": "custom",
+      "style": "color: white; content: \"12\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._13:before",
+      "type": "custom",
+      "style": "color: white; content: \"13\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._14:before",
+      "type": "custom",
+      "style": "color: white; content: \"14\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._15:before",
+      "type": "custom",
+      "style": "color: white; content: \"15\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(2) > button._16:before",
+      "type": "custom",
+      "style": "color: white; content: \"16\";"
     }
   ],
   "element": "body",
@@ -55,16 +155,7 @@
         {
           "element": "div",
           "style": "display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); height: 523px; margin: 105px auto 122px auto; max-width: 532px; width: 100%;",
-          "extend": [
-            {
-              "extension": "> button",
-              "style": "background-color: #304859; border-radius: 50%; flex-grow: 1; padding: 0; transition: 300ms;"
-            },
-            {
-              "extension": "> button:hover",
-              "style": "background-color: #6395B8;"
-            }
-          ],
+          "extend": [],
           "attributes": {
             "id": "board"
           }
