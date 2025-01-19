@@ -23,7 +23,6 @@ if (
 	window.location.href = "../";
 else {
 	let stopTimer: () => void;
-	let turn = 0;
 	let gridButtonsNumber: 16 | 36;
 	switch (gridSize) {
 		case "4x4":
@@ -62,18 +61,16 @@ else {
 				stopTimer = stop;
 			};
 			const { elementName: timer, elementNameDescription: timerDescription } =
-				createBottomElement({ name: "Time", bottomType: "non-playerSelector" });
+				createBottomElement("Time");
 			const { elementName: moves, elementNameDescription: movesDescription } =
-				createBottomElement({
-					name: "Moves",
-					bottomType: "non-playerSelector",
-				});
+				createBottomElement("Moves");
 			timerDescription.textContent = "0:00";
 			movesDescription.textContent = "0";
 			footer.appendChild(timer);
 			footer.appendChild(moves);
+
 			generateBoard({
-				movesDescription: [movesDescription][turn],
+				elementDescriptionCollection: [movesDescription],
 				gridButtonsNumber: gridButtonsNumber,
 				stopTimer: () => stopTimer(),
 			});
@@ -83,6 +80,24 @@ else {
 					buttonFirstClickListener,
 				);
 			}
+		} else {
+			const elementReferenceCollection = [] as HTMLDivElement[];
+			const elementDescriptionCollection = [] as HTMLParagraphElement[];
+			for (let i = 0; i < Number(players); i++) {
+				const {
+					elementName: player,
+					elementNameDescription: player1Description,
+				} = createBottomElement(`Player ${i + 1}`);
+				player1Description.textContent = "0";
+				footer.appendChild(player);
+				elementReferenceCollection.push(player);
+				elementDescriptionCollection.push(player1Description);
+			}
+			generateBoard({
+				elementReferenceCollection: elementReferenceCollection,
+				elementDescriptionCollection: elementDescriptionCollection,
+				gridButtonsNumber: gridButtonsNumber,
+			});
 		}
 	};
 	setNewGame(gridButtonsNumber);

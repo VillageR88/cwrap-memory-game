@@ -3,18 +3,23 @@ import incrementMovesCount from "./incrementMovesCount.js";
 const board = document.querySelector("main > div") as HTMLElement;
 
 /**
- *
- * @param movesDescription - HTMLParagraphElement that represent number of player moves
+ * Function that generates main element board
  */
 const generateBoard = ({
-	movesDescription,
+	elementReferenceCollection,
+	elementDescriptionCollection,
 	gridButtonsNumber,
 	stopTimer,
 }: {
-	movesDescription: HTMLParagraphElement;
+	elementReferenceCollection?: HTMLDivElement[];
+	elementDescriptionCollection: HTMLParagraphElement[];
 	gridButtonsNumber: 16 | 36;
-	stopTimer: () => void;
+	stopTimer?: () => void;
 }) => {
+	let turn = 0;
+	if (elementReferenceCollection) {
+		elementReferenceCollection[turn].classList.add("turn");
+	}
 	const boardClasses = [] as string[];
 	for (let i = 0; i < gridButtonsNumber / 2; i++) {
 		for (let j = 0; j < 2; j++) {
@@ -31,17 +36,42 @@ const generateBoard = ({
 				event,
 				currentClass,
 				event.target as HTMLButtonElement,
-				() => receivePairFoundInfo(),
-				() => incrementMovesCount(movesDescription),
+				() => {
+					passEnumPairFoundInfo();
+				},
+				() => {
+					if (elementReferenceCollection) {
+						if (!pairFound) {
+							elementReferenceCollection[turn].classList.remove("turn");
+							if (turn !== elementReferenceCollection.length - 1) turn++;
+							else turn = 0;
+							if (pairFoundEnum !== gridButtonsNumber / 2)
+								elementReferenceCollection[turn].classList.add("turn");
+						} else {
+							if (pairFoundEnum === gridButtonsNumber / 2)
+								elementReferenceCollection[turn].classList.remove("turn");
+							pairFound = false;
+						}
+					} else
+						elementDescriptionCollection[turn].textContent = (
+							Number(elementDescriptionCollection[turn].textContent) + 1
+						).toString();
+				},
 			);
 		});
 		board.appendChild(boardButton);
 	}
-	let pairFound = 0;
-
-	const receivePairFoundInfo = () => {
-		pairFound++;
-		if (pairFound === gridButtonsNumber / 2) {
+	let pairFound = false;
+	let pairFoundEnum = 0;
+	const passEnumPairFoundInfo = () => {
+		pairFound = true;
+		if (elementReferenceCollection) {
+			elementDescriptionCollection[turn].textContent = (
+				Number(elementDescriptionCollection[turn].textContent) + 1
+			).toString();
+		}
+		pairFoundEnum++;
+		if (pairFoundEnum === gridButtonsNumber / 2 && stopTimer) {
 			stopTimer();
 		}
 	};
