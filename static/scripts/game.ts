@@ -61,9 +61,9 @@ else {
 				stopTimer = stop;
 			};
 			const { elementName: timer, elementNameDescription: timerDescription } =
-				createBottomElement("Time");
+				createBottomElement({ name: "Time" });
 			const { elementName: moves, elementNameDescription: movesDescription } =
-				createBottomElement("Moves");
+				createBottomElement({ name: "Moves" });
 			timerDescription.textContent = "0:00";
 			movesDescription.textContent = "0";
 			footer.appendChild(timer);
@@ -87,7 +87,7 @@ else {
 				const {
 					elementName: player,
 					elementNameDescription: player1Description,
-				} = createBottomElement(`Player ${i + 1}`);
+				} = createBottomElement({ name: `Player ${i + 1}`, extended: true });
 				player1Description.textContent = "0";
 				footer.appendChild(player);
 				elementReferenceCollection.push(player);

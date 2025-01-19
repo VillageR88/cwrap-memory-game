@@ -14,6 +14,16 @@
   },
   "classroom": [
     {
+      "name": "@font-face",
+      "type": "custom",
+      "style": "font-display: swap; font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 400; src: url('../static/fonts/AtkinsonHyperlegible-Regular.ttf') format('truetype');"
+    },
+    {
+      "name": "@font-face",
+      "type": "custom",
+      "style": "font-display: swap; font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 700; src: url('../static/fonts/AtkinsonHyperlegible-Bold.ttf') format('truetype');"
+    },
+    {
       "name": "legend",
       "type": "element",
       "style": "color: #7191A5; font-size: 20px; font-weight: bold; padding-inline: unset;"
@@ -21,7 +31,7 @@
     {
       "name": "body > main > div:nth-of-type(1) > button",
       "type": "custom",
-      "style": "background-color: #304859; border-radius: 50%; box-sizing: border-box; color: #FCFCFC; flex-grow: 1; font-size: 56px; font-weight: bold; padding: 0; transition: 300ms;"
+      "style": "background-color: #304859; border-radius: 50%; box-sizing: border-box; color: #FCFCFC; flex-grow: 1; font-size: 56px; font-weight: bold; max-width: 118px; padding: 0; transition: 300ms;"
     },
     {
       "name": "body > main > div:nth-of-type(1).larger > button",
@@ -285,7 +295,7 @@
     },
     {
       "element": "main",
-      "style": "color: white; display: flex; flex-direction: column; max-width: 1110px; width: 100%;",
+      "style": "display: flex; flex-direction: column; max-width: 1110px; width: 100%;",
       "children": [
         {
           "element": "div",
@@ -304,7 +314,7 @@
       "extend": [
         {
           "extension": "> div",
-          "style": "align-items: center; background-color: #DFE7EC; border-radius: 10px; box-sizing: border-box; display: flex; height: 72px; justify-content: space-between; max-width: 255px; padding: 17px 24px 15px 21px; width: 100%;"
+          "style": "align-items: center; background-color: #DFE7EC; border-radius: 10px; box-sizing: border-box; display: flex; height: 72px; justify-content: space-between; max-width: 255px; padding: 17px 24px 15px 21px; position: relative; transition: 300ms; width: 100%;"
         },
         {
           "extension": "> div > h2:nth-of-type(1)",
@@ -315,16 +325,32 @@
           "style": "color: #304859; font-size: 32px; font-weight: bold; margin: 0;"
         },
         {
-          "extension": "> div > svg",
-          "style": "fill: red;"
-        },
-        {
           "extension": "> div.turn",
           "style": "background-color: #FDA214;"
         },
         {
-          "extension": "> div.turn > *:nth-of-type(1)",
-          "style": "color: white;"
+          "extension": "> div.turn > p:nth-of-type(1)",
+          "style": "color: #FCFCFC; transition: 300ms;"
+        },
+        {
+          "extension": "> div.turn > h2:nth-of-type(1)",
+          "style": "color: #FCFCFC; transition: 300ms;"
+        },
+        {
+          "extension": "> div > span",
+          "style": "align-self: center; bottom: -39px; color: transparent; font-size: 13px; font-weight: bold; left: 0; letter-spacing: 5px; margin-inline: auto; position: absolute; text-align: center; transition: 300ms; width: 100%;"
+        },
+        {
+          "extension": "> div > svg",
+          "style": "fill: transparent; left: calc(50% - 39px * 0.5); position: absolute; top: -19px; transition: 300ms;"
+        },
+        {
+          "extension": "> div.turn > svg",
+          "style": "fill: #FDA214;"
+        },
+        {
+          "extension": "> div.turn > span",
+          "style": "color: #152938;"
         }
       ],
       "style": "display: flex; gap: 30px; justify-content: center; margin-inline: auto; max-width: 1110px; min-height: 130px; width: 100%; width: 100%;"

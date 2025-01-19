@@ -7,12 +7,64 @@
         "type": "image/x-icon"
       },
       {
+        "rel": "preload",
+        "href": "./static/fonts/AtkinsonHyperlegible-Regular.ttf",
+        "as": "font",
+        "type": "font/ttf",
+        "crossorigin": "anonymous"
+      },
+      {
+        "rel": "preload",
+        "href": "./static/fonts/AtkinsonHyperlegible-Bold.ttf",
+        "as": "font",
+        "type": "font/ttf",
+        "crossorigin": "anonymous"
+      },
+      {
         "rel": "prefetch",
-        "href": "./game"
+        "href": "./game/"
+      },
+      {
+        "rel": "prefetch",
+        "href": "./game/styles.css"
+      },
+      {
+        "rel": "prefetch",
+        "href": "./static/scripts/createBottomElement.js"
+      },
+      {
+        "rel": "prefetch",
+        "href": "./static/scripts/game.js"
+      },
+      {
+        "rel": "prefetch",
+        "href": "./static/scripts/generateBoard.js"
+      },
+      {
+        "rel": "prefetch",
+        "href": "./static/scripts/incrementMovesCount.js"
+      },
+      {
+        "rel": "prefetch",
+        "href": "./static/scripts/resolveMove.js"
+      },
+      {
+        "rel": "prefetch",
+        "href": "./static/scripts/timerRunner.js"
       }
     ]
   },
   "classroom": [
+    {
+      "name": "@font-face",
+      "type": "custom",
+      "style": "font-display: swap; font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 400; src: url('./static/fonts/AtkinsonHyperlegible-Regular.ttf') format('truetype');"
+    },
+    {
+      "name": "@font-face",
+      "type": "custom",
+      "style": "font-display: swap; font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 700; src: url('./static/fonts/AtkinsonHyperlegible-Bold.ttf') format('truetype');"
+    },
     {
       "name": "legend",
       "type": "element",
@@ -34,7 +86,7 @@
         {
           "element": "form",
           "attributes": {
-            "action": "game"
+            "action": "game/"
           },
           "style": "background-color: #FCFCFC; border-radius: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px; min-height: 559px; padding: 56px; width: 100%;",
           "children": [
