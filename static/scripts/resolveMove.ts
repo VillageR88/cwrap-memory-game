@@ -8,6 +8,7 @@ const resolveMove = (
 	currentClass: string,
 	currentNode: HTMLButtonElement,
 	passPairFoundInfo: () => void,
+	passMoveDone: () => void,
 ) => {
 	const currentButton = event.target as HTMLButtonElement;
 	if (
@@ -33,6 +34,7 @@ const resolveMove = (
 		}
 		previousElementClass = undefined;
 		previousElementNode = undefined;
+		passMoveDone();
 	} else {
 		previousElementClass = currentClass;
 		previousElementNode = currentNode;

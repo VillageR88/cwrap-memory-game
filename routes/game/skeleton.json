@@ -117,6 +117,16 @@
       "name": "body > main > div:nth-of-type(1) > button._16:before",
       "type": "custom",
       "style": "color: white; content: \"16\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(1) > button._17:before",
+      "type": "custom",
+      "style": "color: white; content: \"17\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(1) > button._18:before",
+      "type": "custom",
+      "style": "color: white; content: \"18\";"
     }
   ],
   "element": "body",
@@ -141,6 +151,9 @@
               "children": [
                 {
                   "element": "button",
+                  "attributes": {
+                    "id": "restart"
+                  },
                   "text": "Restart",
                   "extend": [
                     {
@@ -176,41 +189,31 @@
       "children": [
         {
           "element": "div",
-          "style": "display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); height: 523px; margin: 105px auto 122px auto; max-width: 532px; width: 100%;",
-          "extend": [],
-          "attributes": {
-            "id": "board"
-          }
+          "style": "display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); height: 523px; margin: 105px auto 122px auto; max-width: 532px; width: 100%;"
         }
       ]
     },
     {
       "element": "footer",
-      "style": "min-height: 130px; width: 100%;",
-      "children": [
+      "extend": [
         {
-          "element": "div",
-          "extend": [
-            {
-              "extension": "> div",
-              "style": "align-items: center; background-color: #DFE7EC; border-radius: 10px; box-sizing: border-box; display: flex; height: 72px; justify-content: space-between; max-width: 255px; padding: 17px 24px 15px 21px; width: 100%;"
-            },
-            {
-              "extension": "> div > h2:nth-of-type(1)",
-              "style": "color: #7191A5; font-size: 18px; font-weight: bold; margin: 0;"
-            },
-            {
-              "extension": "> div > p:nth-of-type(1)",
-              "style": "color: #304859; font-size: 32px; font-weight: bold; margin: 0;"
-            },
-            {
-              "extension": "> div > svg",
-              "style": "fill: red;"
-            }
-          ],
-          "style": "align-items: center; display: flex; gap: 30px; justify-content: center; margin-inline: auto; max-width: 1110px; width: 100%;"
+          "extension": "> div",
+          "style": "align-items: center; background-color: #DFE7EC; border-radius: 10px; box-sizing: border-box; display: flex; height: 72px; justify-content: space-between; max-width: 255px; padding: 17px 24px 15px 21px; width: 100%;"
+        },
+        {
+          "extension": "> div > h2:nth-of-type(1)",
+          "style": "color: #7191A5; font-size: 18px; font-weight: bold; margin: 0;"
+        },
+        {
+          "extension": "> div > p:nth-of-type(1)",
+          "style": "color: #304859; font-size: 32px; font-weight: bold; margin: 0;"
+        },
+        {
+          "extension": "> div > svg",
+          "style": "fill: red;"
         }
-      ]
+      ],
+      "style": "align-items: center; display: flex; gap: 30px; justify-content: center; margin-inline: auto; max-width: 1110px; min-height: 130px; width: 100%; width: 100%;"
     },
     {
       "element": "script",
