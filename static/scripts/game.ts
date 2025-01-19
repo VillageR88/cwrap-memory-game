@@ -9,6 +9,10 @@ const urlParams = new URLSearchParams(window.location.search);
 const theme = urlParams.get("theme");
 const players = urlParams.get("players");
 const gridSize = urlParams.get("grid-size");
+newGame.addEventListener("click", () => {
+	window.location.href = "../";
+});
+
 if (
 	!(theme === "numbers" || theme === "icons") ||
 	Number(players) < 1 ||
@@ -39,15 +43,14 @@ else {
 			}
 		}
 		let stopTimer: () => void;
-		restart.addEventListener("click", () => {
+		const restartListener = () => {
+			restart.removeEventListener("click", restartListener);
 			if (stopTimer) stopTimer();
 			board.innerHTML = "";
 			footer.innerHTML = "";
 			setNewGame(gridCalculated);
-		});
-		newGame.addEventListener("click", () => {
-			window.location.href = "../";
-		});
+		};
+		restart.addEventListener("click", restartListener);
 
 		let pairFound = 0;
 		const receivePairFoundInfo = () => {

@@ -44,9 +44,9 @@
       "style": "background-color: #BCCED9;"
     },
     {
-      "name": "body > main > div:nth-of-type(1).icons > button.found",
+      "name": "body > main > div:nth-of-type(1).icons > button",
       "type": "custom",
-      "style": "content: \"sports_soccer\";"
+      "style": "font-family: Material Symbols Outlined;"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._1:before",
@@ -54,9 +54,19 @@
       "style": "color: white; content: \"1\";"
     },
     {
+      "name": "body > main > div:nth-of-type(1).icons > button._1:before",
+      "type": "custom",
+      "style": "content: \"sports_soccer\";"
+    },
+    {
       "name": "body > main > div:nth-of-type(1) > button._2:before",
       "type": "custom",
       "style": "color: white; content: \"2\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(1).icons > button._2:before",
+      "type": "custom",
+      "style": "content: \"anchor\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._3:before",
@@ -64,9 +74,19 @@
       "style": "color: white; content: \"3\";"
     },
     {
+      "name": "body > main > div:nth-of-type(1).icons > button._3:before",
+      "type": "custom",
+      "style": "color: white; content: \"science\";"
+    },
+    {
       "name": "body > main > div:nth-of-type(1) > button._4:before",
       "type": "custom",
       "style": "color: white; content: \"4\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(1).icons > button._4:before",
+      "type": "custom",
+      "style": "color: white; content: \"pan_tool\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._5:before",
@@ -74,9 +94,19 @@
       "style": "color: white; content: \"5\";"
     },
     {
+      "name": "body > main > div:nth-of-type(1).icons > button._5:before",
+      "type": "custom",
+      "style": "color: white; content: \"bug_report\";"
+    },
+    {
       "name": "body > main > div:nth-of-type(1) > button._6:before",
       "type": "custom",
       "style": "color: white; content: \"6\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(1).icons > button._6:before",
+      "type": "custom",
+      "style": "color: white; content: \"dark_mode\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._7:before",
@@ -84,9 +114,19 @@
       "style": "color: white; content: \"7\";"
     },
     {
+      "name": "body > main > div:nth-of-type(1).icons > button._7:before",
+      "type": "custom",
+      "style": "color: white; content: \"ac_unit\";"
+    },
+    {
       "name": "body > main > div:nth-of-type(1) > button._8:before",
       "type": "custom",
       "style": "color: white; content: \"8\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(1).icons > button._8:before",
+      "type": "custom",
+      "style": "color: white; content: \"directions_car\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._9:before",
@@ -94,9 +134,19 @@
       "style": "color: white; content: \"9\";"
     },
     {
+      "name": "body > main > div:nth-of-type(1).icons > button._9:before",
+      "type": "custom",
+      "style": "color: white; content: \"delete\";"
+    },
+    {
       "name": "body > main > div:nth-of-type(1) > button._10:before",
       "type": "custom",
       "style": "color: white; content: \"10\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(1).icons > button._10:before",
+      "type": "custom",
+      "style": "color: white; content: \"public\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._11:before",
@@ -104,9 +154,19 @@
       "style": "color: white; content: \"11\";"
     },
     {
+      "name": "body > main > div:nth-of-type(1).icons > button._11:before",
+      "type": "custom",
+      "style": "color: white; content: \"diamond\";"
+    },
+    {
       "name": "body > main > div:nth-of-type(1) > button._12:before",
       "type": "custom",
       "style": "color: white; content: \"12\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(1).icons > button._12:before",
+      "type": "custom",
+      "style": "color: white; content: \"notifications\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._13:before",
@@ -114,9 +174,19 @@
       "style": "color: white; content: \"13\";"
     },
     {
+      "name": "body > main > div:nth-of-type(1).icons > button._13:before",
+      "type": "custom",
+      "style": "color: white; content: \"bolt\";"
+    },
+    {
       "name": "body > main > div:nth-of-type(1) > button._14:before",
       "type": "custom",
       "style": "color: white; content: \"14\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(1).icons > button._14:before",
+      "type": "custom",
+      "style": "color: white; content: \"emoji_objects\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._15:before",
@@ -124,9 +194,19 @@
       "style": "color: white; content: \"15\";"
     },
     {
+      "name": "body > main > div:nth-of-type(1).icons > button._15:before",
+      "type": "custom",
+      "style": "color: white; content: \"accessibility_new\";"
+    },
+    {
       "name": "body > main > div:nth-of-type(1) > button._16:before",
       "type": "custom",
       "style": "color: white; content: \"16\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(1).icons > button._16:before",
+      "type": "custom",
+      "style": "color: white; content: \"headphones\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._17:before",
@@ -134,9 +214,19 @@
       "style": "color: white; content: \"17\";"
     },
     {
+      "name": "body > main > div:nth-of-type(1).icons > button._17:before",
+      "type": "custom",
+      "style": "color: white; content: \"security\";"
+    },
+    {
       "name": "body > main > div:nth-of-type(1) > button._18:before",
       "type": "custom",
       "style": "color: white; content: \"18\";"
+    },
+    {
+      "name": "body > main > div:nth-of-type(1).icons > button._18:before",
+      "type": "custom",
+      "style": "color: white; content: \"wifi\";"
     }
   ],
   "element": "body",
@@ -202,7 +292,7 @@
           "extend": [
             {
               "extension": ".larger",
-              "style": "grid-template-columns: repeat(6, 1fr);"
+              "style": "gap: 16px; grid-template-columns: repeat(6, 1fr); height: 572px; margin: 85px auto 83px auto; max-width: 572px;"
             }
           ],
           "style": "display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); height: 523px; margin: 105px auto 122px auto; max-width: 532px; width: 100%;"
@@ -229,7 +319,7 @@
           "style": "fill: red;"
         }
       ],
-      "style": "align-items: center; display: flex; gap: 30px; justify-content: center; margin-inline: auto; max-width: 1110px; min-height: 130px; width: 100%; width: 100%;"
+      "style": "display: flex; gap: 30px; justify-content: center; margin-inline: auto; max-width: 1110px; min-height: 130px; width: 100%; width: 100%;"
     },
     {
       "element": "script",
