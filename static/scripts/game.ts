@@ -16,9 +16,8 @@ if (
 	!(gridSize === "4x4" || gridSize === "6x6")
 )
 	window.location.href = "../";
-
-if (gridSize) {
-	let gridCalculated: 16 | 36 = 16;
+else {
+	let gridCalculated: 16 | 36;
 	switch (gridSize) {
 		case "4x4":
 			gridCalculated = 16;
@@ -29,7 +28,9 @@ if (gridSize) {
 			board.classList.add("larger");
 			break;
 	}
-
+	theme === "icons"
+		? board.classList.add("icons")
+		: board.classList.remove("icons");
 	const setNewGame = (gridCalculated: 36 | 16) => {
 		const boardClasses = [] as string[];
 		for (let i = 0; i < gridCalculated / 2; i++) {
@@ -77,7 +78,10 @@ if (gridSize) {
 		const { elementName: timer, elementNameDescription: timerDescription } =
 			createBottomElement({ name: "Time", bottomType: "non-playerSelector" });
 		const { elementName: moves, elementNameDescription: movesDescription } =
-			createBottomElement({ name: "Moves", bottomType: "non-playerSelector" });
+			createBottomElement({
+				name: "Moves",
+				bottomType: "non-playerSelector",
+			});
 		timerDescription.textContent = "0:00";
 		movesDescription.textContent = "0";
 		footer.appendChild(timer);

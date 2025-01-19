@@ -24,6 +24,11 @@
       "style": "background-color: #304859; border-radius: 50%; box-sizing: border-box; color: #FCFCFC; flex-grow: 1; font-size: 56px; font-weight: bold; padding: 0; transition: 300ms;"
     },
     {
+      "name": "body > main > div:nth-of-type(1).larger > button",
+      "type": "custom",
+      "style": "font-size: 44px;"
+    },
+    {
       "name": "body > main > div:nth-of-type(1) > button:hover",
       "type": "custom",
       "style": "background-color: #6395B8;"
@@ -37,6 +42,11 @@
       "name": "body > main > div:nth-of-type(1) > button.found",
       "type": "custom",
       "style": "background-color: #BCCED9;"
+    },
+    {
+      "name": "body > main > div:nth-of-type(1).icons > button.found",
+      "type": "custom",
+      "style": "content: \"sports_soccer\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._1:before",
@@ -189,6 +199,12 @@
       "children": [
         {
           "element": "div",
+          "extend": [
+            {
+              "extension": ".larger",
+              "style": "grid-template-columns: repeat(6, 1fr);"
+            }
+          ],
           "style": "display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); height: 523px; margin: 105px auto 122px auto; max-width: 532px; width: 100%;"
         }
       ]
