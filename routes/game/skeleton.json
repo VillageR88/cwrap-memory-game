@@ -31,11 +31,23 @@
     {
       "name": "body > main > div:nth-of-type(1) > button",
       "type": "custom",
+      "mediaQueries": [
+        {
+          "query": "max-width: 640px",
+          "style": "font-size: 40px; max-width: 72px;"
+        }
+      ],
       "style": "background-color: #304859; border-radius: 50%; box-sizing: border-box; color: #FCFCFC; flex-grow: 1; font-size: 56px; font-weight: bold; max-width: 118px; padding: 0; transition: 300ms;"
     },
     {
       "name": "body > main > div:nth-of-type(1).larger > button",
       "type": "custom",
+      "mediaQueries": [
+        {
+          "query": "max-width: 640px",
+          "style": "font-size: 24px;"
+        }
+      ],
       "style": "font-size: 44px;"
     },
     {
@@ -305,12 +317,43 @@
               "style": "gap: 16px; grid-template-columns: repeat(6, 1fr); height: 572px; margin: 85px auto 83px auto; max-width: 572px;"
             }
           ],
+          "mediaQueries": [
+            {
+              "query": "max-width: 640px",
+              "extend": [
+                {
+                  "extension": ".larger",
+                  "style": "gap: 9px; height: 327px; max-width: 327px;"
+                }
+              ],
+              "style": "height: 327px; max-width: 327px;"
+            }
+          ],
           "style": "display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); height: 523px; margin: 105px auto 122px auto; max-width: 532px; width: 100%;"
         }
       ]
     },
     {
       "element": "footer",
+      "mediaQueries": [
+        {
+          "query": "max-width: 640px",
+          "extend": [
+            {
+              "extension": "> div",
+              "style": "flex-direction: column; justify-content: center; max-width: 151px; padding: 10px 31px;"
+            },
+            {
+              "extension": "> div > h2:nth-of-type(1)",
+              "style": "font-size: 15px;"
+            },
+            {
+              "extension": "> div > p:nth-of-type(1)",
+              "style": "font-size: 24px;"
+            }
+          ]
+        }
+      ],
       "extend": [
         {
           "extension": "> div",
@@ -354,6 +397,74 @@
         }
       ],
       "style": "display: flex; gap: 30px; justify-content: center; margin-inline: auto; max-width: 1110px; min-height: 130px; width: 100%; width: 100%;"
+    },
+    {
+      "element": "div",
+      "style": "align-items: center; background-color: rgba(0,0,0,0.5); display: none; height: 100%; justify-content: center; left: 0; position: fixed; top: 0; width: 100%;",
+      "children": [
+        {
+          "element": "div",
+          "style": "align-items: center; background-color: #F2F2F2; border-radius: 20px; box-sizing: border-box; display: flex; flex-direction: column; max-width: 654px; padding: 51px 56px 69px 56px; width: 100%;",
+          "children": [
+            {
+              "element": "h2",
+              "text": "Title Xyz",
+              "style": "color: #152938; font-size: 48px; font-weight: bold; margin: 0;"
+            },
+            {
+              "element": "p",
+              "text": "Description Xyz",
+              "style": "color: #7191A5; font-size: 18px; font-weight: bold; margin: 16px 0 40px 0;"
+            },
+            {
+              "element": "div",
+              "extend": [
+                {
+                  "extension": "> div",
+                  "style": "align-items: center; background-color: #DFE7EC; border-radius: 10px; box-sizing: border-box; display: flex; justify-content: space-between; min-height: 72px; padding: 17px 32px 15px 32px; width: 100%;"
+                },
+                {
+                  "extension": "> div > h3",
+                  "style": "color: #7191A5; font-size: 18px; font-weight: bold; margin: 0;"
+                },
+                {
+                  "extension": "> div > p",
+                  "style": "color: #304859; font-size: 32px; font-weight: bold; margin: 0;"
+                }
+              ],
+              "style": "display: flex; flex-direction: column; gap: 16px; width: 100%;",
+              "children": [
+                {
+                  "element": "div",
+                  "children": [
+                    {
+                      "element": "h3",
+                      "text": "Time Elapsed"
+                    },
+                    {
+                      "element": "p",
+                      "text": "1:53"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "div",
+              "style": "display: flex; gap: 14px; margin-top: 56px; width: 100%;",
+              "blueprint": {
+                "count": "2",
+                "element": "cwrapArray[button,a]",
+                "attributes": {
+                  "href": "cwrapArray[cwrapOmit,../]"
+                },
+                "text": "cwrapArray[Restart,Setup New Game]",
+                "style": "align-items: center; background-color: cwrapArray[#FDA214,#DFE7EC]; border-radius: 26px; color: cwrapArray[#FCFCFC,#304859]; cursor: pointer; display: flex; font-size: 20px; font-weight: bold; height: 100%; justify-content: center; max-width: 264px; min-height: 52px; text-align: center; text-decoration: cwrapArray[cwrapOmit, none]; width: 100%;"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "element": "script",

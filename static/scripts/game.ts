@@ -3,12 +3,18 @@ import timerRunner from "./timerRunner.js";
 import generateBoard from "./generateBoard.js";
 const restart = document.getElementById("restart") as HTMLButtonElement;
 const newGame = document.getElementById("new-game") as HTMLButtonElement;
-const board = document.querySelector("main > div") as HTMLElement;
+const board = document.querySelector("main > div") as HTMLDivElement;
 const footer = document.querySelector("footer") as HTMLElement;
 const urlParams = new URLSearchParams(window.location.search);
 const theme = urlParams.get("theme");
 const players = urlParams.get("players");
 const gridSize = urlParams.get("grid-size");
+const mask = document.querySelector(
+	"body > div:nth-of-type(1)",
+) as HTMLDivElement;
+const popupRestart = document.querySelector(
+	"body > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1)",
+) as HTMLButtonElement;
 
 newGame.addEventListener("click", () => {
 	window.location.href = "../";
@@ -38,13 +44,25 @@ else {
 		? board.classList.add("icons")
 		: board.classList.remove("icons");
 	const setNewGame = (gridButtonsNumber: 36 | 16) => {
+		const popupRestartListener = () => {
+			cleanListeners();
+			board.innerHTML = "";
+			footer.innerHTML = "";
+			mask.style.display = "none";
+			setNewGame(gridButtonsNumber);
+		};
 		const restartListener = () => {
-			restart.removeEventListener("click", restartListener);
+			cleanListeners();
 			if (stopTimer) stopTimer();
 			board.innerHTML = "";
 			footer.innerHTML = "";
 			setNewGame(gridButtonsNumber);
 		};
+		const cleanListeners = () => {
+			popupRestart.removeEventListener("click", popupRestartListener);
+			restart.removeEventListener("click", restartListener);
+		};
+		popupRestart.addEventListener("click", popupRestartListener);
 		restart.addEventListener("click", restartListener);
 
 		if (Number(players) === 1) {
@@ -70,6 +88,7 @@ else {
 			footer.appendChild(moves);
 
 			generateBoard({
+				maskReference: mask,
 				elementDescriptionCollection: [movesDescription],
 				gridButtonsNumber: gridButtonsNumber,
 				stopTimer: () => stopTimer(),
@@ -94,6 +113,7 @@ else {
 				elementDescriptionCollection.push(player1Description);
 			}
 			generateBoard({
+				maskReference: mask,
 				elementReferenceCollection: elementReferenceCollection,
 				elementDescriptionCollection: elementDescriptionCollection,
 				gridButtonsNumber: gridButtonsNumber,
