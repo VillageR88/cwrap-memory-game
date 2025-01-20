@@ -337,6 +337,23 @@
       "element": "footer",
       "mediaQueries": [
         {
+          "query": "max-width: 920px",
+          "extend": [
+            {
+              "extension": "> div:has(svg)",
+              "style": "align-items: unset; flex-direction: column;"
+            },
+            {
+              "extension": "> div:has(svg) > h2:nth-of-type(1)",
+              "style": "font-size: 15px;"
+            },
+            {
+              "extension": "> div:has(svg) > p:nth-of-type(1)",
+              "style": "font-size: 24px;"
+            }
+          ]
+        },
+        {
           "query": "max-width: 640px",
           "extend": [
             {

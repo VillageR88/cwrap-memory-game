@@ -72,35 +72,47 @@
     }
   ],
   "element": "body",
-  "style": "align-items: center; background-color: #152938; box-sizing: border-box; display: flex; font-family: Atkinson Hyperlegible, serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 40px;",
+  "style": "align-items: center; background-color: #152938; box-sizing: border-box; display: flex; font-family: Atkinson Hyperlegible, serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 24px;",
   "children": [
     {
       "element": "main",
-      "style": "align-items: center; color: white; display: flex; flex-direction: column; max-width: 654px; min-height: 687px; width: 100%;",
+      "style": "align-items: center; color: white; display: flex; flex-direction: column; max-width: 654px; width: 100%;",
       "children": [
         {
           "element": "h1",
           "text": "memory",
-          "style": "margin-bottom: 78px;"
+          "mediaQueries": [
+            {
+              "query": "max-width: 640px",
+              "style": "font-size: 32px; margin-bottom: 48px;"
+            }
+          ],
+          "style": "margin: 0 0 78px 0;"
         },
         {
           "element": "form",
           "attributes": {
             "action": "game/"
           },
-          "style": "background-color: #FCFCFC; border-radius: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px; min-height: 559px; padding: 56px; width: 100%;",
+          "mediaQueries": [
+            {
+              "query": "max-width: 640px",
+              "style": "gap: 24px; padding: 24px; width: 100%;"
+            }
+          ],
+          "style": "background-color: #FCFCFC; border-radius: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px; padding: 56px; width: 100%;",
           "children": [
             {
               "element": "cwrap-template",
-              "text": "cwrapTemplate[fieldset(inputNumber=2,legend=Select Theme,name=theme,checkboxes=theme,gap=30px)]"
+              "text": "cwrapTemplate[fieldset(inputNumber=2,legend=Select Theme,name=theme,checkboxes=theme,maxWidth=256px)]"
             },
             {
               "element": "cwrap-template",
-              "text": "cwrapTemplate[fieldset(inputNumber=4,legend=Numbers of Players,name=players,checkboxes=players,gap=22px)]"
+              "text": "cwrapTemplate[fieldset(inputNumber=4,legend=Numbers of Players,name=players,checkboxes=players,maxWidth=119px)]"
             },
             {
               "element": "cwrap-template",
-              "text": "cwrapTemplate[fieldset(inputNumber=2,legend=Grid Size,name=grid-size,checkboxes=sizes,gap=30px)]"
+              "text": "cwrapTemplate[fieldset(inputNumber=2,legend=Grid Size,name=grid-size,checkboxes=sizes,maxWidth=256px))]"
             },
             {
               "element": "button",
@@ -109,6 +121,12 @@
                 {
                   "extension": ":hover",
                   "style": "background-color: #FFB84A;"
+                }
+              ],
+              "mediaQueries": [
+                {
+                  "query": "max-width: 640px",
+                  "style": "font-size: 18px; min-height: 48px;"
                 }
               ],
               "style": "background-color: #FDA214; border: none; border-radius: 35px; color: #FCFCFC; font-family: Atkinson Hyperlegible, serif; font-size: 32px; font-weight: bold; min-height: 70px; transition: 300ms;"
