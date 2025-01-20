@@ -48,7 +48,9 @@ else {
 			cleanListeners();
 			board.innerHTML = "";
 			footer.innerHTML = "";
-			mask.style.display = "none";
+			mask.style.opacity = "0";
+			mask.style.userSelect = "none";
+			mask.style.pointerEvents = "none";
 			setNewGame(gridButtonsNumber);
 		};
 		const restartListener = () => {

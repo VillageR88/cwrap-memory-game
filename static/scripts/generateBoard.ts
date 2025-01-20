@@ -61,12 +61,42 @@ const generateBoard = ({
 							//end condition multiplayer
 							if (pairFoundEnum === gridButtonsNumber / 2) {
 								elementReferenceCollection[turn].classList.remove("turn");
+								resultsContainer.innerHTML = "";
+								endDescription.textContent =
+									"Game over! Here’s how you got on…";
+								completePlayerCollection.sort((b, a) => a.value - b.value);
+								let numberOfWinners = 0;
+								for (const { key, value } of completePlayerCollection) {
+									const resultDiv = document.createElement("div");
+									const resultTitle = document.createElement("h3");
+									const resultDescription = document.createElement("p");
+									resultTitle.textContent = key;
+									if (value === completePlayerCollection[0].value) {
+										numberOfWinners++;
+										resultDiv.classList.add("winner");
+										resultTitle.textContent += " (Winner!)";
+									}
+									resultDescription.textContent = value
+										.toString()
+										.concat(value === 1 ? " Pair" : value > 1 ? " Pairs" : "");
+									resultDiv.appendChild(resultTitle);
+									resultDiv.appendChild(resultDescription);
+									resultsContainer.appendChild(resultDiv);
+								}
+								if (numberOfWinners === 1)
+									endTitle.textContent =
+										completePlayerCollection[0].key.concat(" Wins!");
+								else endTitle.textContent = "It’s a tie!";
+
+								console.log("numberOfWinners", numberOfWinners);
+								maskReference.style.opacity = "1";
+								maskReference.style.userSelect = "unset";
+								maskReference.style.pointerEvents = "unset";
 							}
 							pairFound = false;
 						}
 					} else {
 						playerPointsCollection[turn]++;
-
 						elementDescriptionCollection[turn].textContent = (
 							Number(elementDescriptionCollection[turn].textContent) + 1
 						).toString();
@@ -76,15 +106,25 @@ const generateBoard = ({
 		});
 		board.appendChild(boardButton);
 	}
+	let completePlayerCollection: { key: string; value: number }[] = [];
+	if (elementReferenceCollection) {
+		completePlayerCollection = Array.from(
+			{ length: elementDescriptionCollection.length },
+			(_, i) => ({ key: `Player ${i + 1}`, value: 0 }),
+		);
+	}
+
 	const playerPointsCollection = new Array(
 		elementDescriptionCollection.length,
 	).fill(0);
+
 	let pairFound = false;
 	let pairFoundEnum = 0;
 	const passEnumPairFoundInfo = () => {
 		pairFound = true;
-		//multiplayer condition
+		//multiplayer condition game-play
 		if (elementReferenceCollection) {
+			completePlayerCollection[turn].value++;
 			elementDescriptionCollection[turn].textContent = (
 				Number(elementDescriptionCollection[turn].textContent) + 1
 			).toString();
@@ -95,7 +135,6 @@ const generateBoard = ({
 			const singleTimerReference = document.querySelector(
 				"footer > div:nth-of-type(1) > p:nth-of-type(1)",
 			) as HTMLParagraphElement;
-
 			endTitle.textContent = "You did it!";
 			endDescription.textContent = "Game over! Here’s how you got on…";
 			resultsContainer.innerHTML = "";
@@ -106,13 +145,15 @@ const generateBoard = ({
 				resultTitle.textContent = ["Time Elapsed", "Moves Taken"][i];
 				resultDescription.textContent = [
 					singleTimerReference.textContent,
-					(playerPointsCollection[turn] + 1).toString(),
+					(playerPointsCollection[turn] + 1).toString().concat(" Moves"),
 				][i];
 				resultDiv.appendChild(resultTitle);
 				resultDiv.appendChild(resultDescription);
 				resultsContainer.appendChild(resultDiv);
 			}
-			maskReference.style.display = "flex";
+			maskReference.style.opacity = "1";
+			maskReference.style.userSelect = "unset";
+			maskReference.style.pointerEvents = "unset";
 			stopTimer();
 		}
 	};
