@@ -22,7 +22,11 @@ const resolveMove = (
 	if (moveCount === 2) {
 		const clickedButtons = document.querySelectorAll(".clicked");
 		for (const button of clickedButtons) {
-			button.classList.remove("clicked");
+			setTimeout(() => {
+				if (document.body.contains(button)) {
+					button.classList.remove("clicked");
+				}
+			}, 600);
 		}
 		moveCount = 0;
 	}

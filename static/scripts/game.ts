@@ -12,9 +12,30 @@ const gridSize = urlParams.get("grid-size");
 const mask = document.querySelector(
 	"body > div:nth-of-type(1)",
 ) as HTMLDivElement;
+const popupDiv = document.querySelector(
+	"body > div:nth-of-type(1) > div:nth-of-type(1)",
+) as HTMLDivElement;
 const popupRestart = document.querySelector(
 	"body > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1)",
 ) as HTMLButtonElement;
+const popupResume = document.querySelector(
+	"body > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(2)",
+) as HTMLButtonElement;
+const mobileMenuButton = document.querySelector(
+	"nav > div > button",
+) as HTMLButtonElement;
+
+mobileMenuButton.addEventListener("click", () => {
+	popupDiv.classList.add("menu-only");
+	mask.style.opacity = "1";
+	mask.style.userSelect = "unset";
+	mask.style.pointerEvents = "unset";
+});
+popupResume.addEventListener("click", () => {
+	mask.style.opacity = "0";
+	mask.style.userSelect = "none";
+	mask.style.pointerEvents = "none";
+});
 
 newGame.addEventListener("click", () => {
 	window.location.href = "../";
@@ -91,6 +112,7 @@ else {
 
 			generateBoard({
 				maskReference: mask,
+				popupReference: popupDiv,
 				elementDescriptionCollection: [movesDescription],
 				gridButtonsNumber: gridButtonsNumber,
 				stopTimer: () => stopTimer(),
@@ -115,6 +137,7 @@ else {
 				elementDescriptionCollection.push(player1Description);
 			}
 			generateBoard({
+				popupReference: popupDiv,
 				maskReference: mask,
 				elementReferenceCollection: elementReferenceCollection,
 				elementDescriptionCollection: elementDescriptionCollection,

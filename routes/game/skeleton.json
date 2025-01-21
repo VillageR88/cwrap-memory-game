@@ -56,14 +56,14 @@
       "style": "background-color: #6395B8;"
     },
     {
-      "name": "body > main > div:nth-of-type(1) > button.clicked",
-      "type": "custom",
-      "style": "background-color: #FDA214; transition: 150ms;"
-    },
-    {
       "name": "body > main > div:nth-of-type(1) > button.found",
       "type": "custom",
       "style": "background-color: #BCCED9;"
+    },
+    {
+      "name": "body > main > div:nth-of-type(1) > button.clicked",
+      "type": "custom",
+      "style": "background-color: #FDA214; transition: 150ms;"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button",
@@ -262,7 +262,7 @@
   "children": [
     {
       "element": "nav",
-      "style": "display: flex; width: 100%;",
+      "style": "display: flex; margin-bottom: auto; width: 100%;",
       "children": [
         {
           "element": "div",
@@ -271,6 +271,12 @@
             {
               "element": "h1",
               "text": "memory",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 640px",
+                  "style": "font-size: 24px;"
+                }
+              ],
               "style": "color: #152938;"
             },
             {
@@ -312,6 +318,17 @@
                   "style": "background-color: #DFE7EC; border-radius: 26px; color: #304859; cursor: pointer; font-family: Atkinson Hyperlegible, serif; font-size: 20px; font-weight: bold; max-width: 149px; min-height: 52px; transition: 300ms; width: 100%;"
                 }
               ]
+            },
+            {
+              "element": "button",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 640px",
+                  "style": "display: flex;"
+                }
+              ],
+              "style": "align-items: center; background-color: #FDA214; border-radius: 26px; color: #FCFCFC; display: none; font-family: Atkinson Hyperlegible, serif; font-size: 16px; font-weight: bold; justify-content: center; max-width: 78px; min-height: 40px; width: 100%;",
+              "text": "Menu"
             }
           ]
         }
@@ -335,13 +352,13 @@
               "extend": [
                 {
                   "extension": ".larger",
-                  "style": "gap: 9px; height: 327px; max-width: 327px;"
+                  "style": "gap: 9px; height: 327px; margin: 40px auto; max-width: 327px;"
                 }
               ],
               "style": "height: 327px; max-width: 327px;"
             }
           ],
-          "style": "display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); height: 523px; margin: 105px auto 122px auto; max-width: 532px; width: 100%;"
+          "style": "display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); height: 523px; margin: 40px auto; max-width: 532px; width: 100%;"
         }
       ]
     },
@@ -446,7 +463,7 @@
           "style": "color: #152938;"
         }
       ],
-      "style": "display: flex; gap: 30px; justify-content: center; margin-inline: auto; max-width: 1110px; min-height: 130px; width: 100%; width: 100%;"
+      "style": "display: flex; gap: 30px; justify-content: center; margin-inline: auto; margin-top: auto; max-width: 1110px; min-height: 130px; width: 100%; width: 100%;"
     },
     {
       "element": "div",
@@ -454,17 +471,63 @@
       "children": [
         {
           "element": "div",
-          "style": "align-items: center; background-color: #F2F2F2; border-radius: 20px; box-sizing: border-box; display: flex; flex-direction: column; max-width: 654px; padding: 51px 56px 69px 56px; width: 100%;",
+          "style": "align-items: center; background-color: #F2F2F2; border-radius: 20px; box-sizing: border-box; display: flex; flex-direction: column; margin-inline: 40px; max-width: 654px; padding: 51px 56px 69px 56px; width: 100%;",
+          "mediaQueries": [
+            {
+              "query": "max-width: 640px",
+              "style": "margin-inline: 24px; padding: 32px 24px 24px 24px;",
+              "extend": [
+                {
+                  "extension": "> div:nth-of-type(2)",
+                  "style": "align-items: center; flex-direction: column;"
+                }
+              ]
+            }
+          ],
+          "extend": [
+            {
+              "extension": ".menu-only > h2",
+              "style": "display: none;"
+            },
+            {
+              "extension": ".menu-only > p",
+              "style": "display: none;"
+            },
+            {
+              "extension": ".menu-only > div:nth-of-type(1)",
+              "style": "display: none;"
+            },
+            {
+              "extension": ".menu-only > div:nth-of-type(2)",
+              "style": "margin-top: unset;"
+            },
+            {
+              "extension": ".menu-only > div:nth-of-type(2) > button:nth-of-type(2)",
+              "style": "display: flex;"
+            }
+          ],
           "children": [
             {
               "element": "h2",
               "text": "Title Xyz",
-              "style": "color: #152938; font-size: 48px; font-weight: bold; margin: 0;"
+              "style": "color: #152938; font-size: 48px; font-weight: bold; margin: 0;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 640px",
+                  "style": "font-size: 24px;"
+                }
+              ]
             },
             {
               "element": "p",
               "text": "Description Xyz",
-              "style": "color: #7191A5; font-size: 18px; font-weight: bold; margin: 16px 0 40px 0;"
+              "style": "color: #7191A5; font-size: 18px; font-weight: bold; margin: 16px 0 40px 0; text-align: center;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 640px",
+                  "style": "font-size: 14px; margin: 9px 0 24px 0;"
+                }
+              ]
             },
             {
               "element": "div",
@@ -494,19 +557,50 @@
                   "style": "color: #FCFCFC;"
                 }
               ],
-              "style": "display: flex; flex-direction: column; gap: 16px; width: 100%;"
+              "style": "display: flex; flex-direction: column; gap: 16px; width: 100%;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 640px",
+                  "extend": [
+                    {
+                      "extension": "> div",
+                      "style": "min-height: 48px; padding: 11px 16px 12px 11px;"
+                    },
+                    {
+                      "extension": "> div > h3",
+                      "style": "font-size: 13px;"
+                    },
+                    {
+                      "extension": "> div > p",
+                      "style": "font-size: 20px;"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "element": "div",
               "style": "display: flex; gap: 14px; margin-top: 56px; width: 100%;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 640px",
+                  "style": "margin-top: 24px;"
+                }
+              ],
               "blueprint": {
-                "count": "2",
-                "element": "cwrapArray[button,a]",
+                "count": "3",
+                "element": "cwrapArray[button,a,button]",
                 "attributes": {
                   "href": "cwrapArray[cwrapOmit,../]"
                 },
-                "text": "cwrapArray[Restart,Setup New Game]",
-                "style": "align-items: center; background-color: cwrapArray[#FDA214,#DFE7EC]; border-radius: 26px; color: cwrapArray[#FCFCFC,#304859]; cursor: pointer; display: flex; font-size: 20px; font-weight: bold; height: 100%; justify-content: center; max-width: 264px; min-height: 52px; text-align: center; text-decoration: cwrapArray[cwrapOmit, none]; width: 100%;"
+                "text": "cwrapArray[Restart,New Game,Resume Game]",
+                "mediaQueries": [
+                  {
+                    "query": "max-width: 640px",
+                    "style": "max-width: unset; min-height: 48px;"
+                  }
+                ],
+                "style": "align-items: center; background-color: cwrapArray[#FDA214,#DFE7EC,#DFE7EC]; border-radius: 26px; color: cwrapArray[#FCFCFC,#304859,#304859]; cursor: pointer; display: cwrapArray[flex,flex,none]; font-size: 20px; font-weight: bold; height: 100%; justify-content: center; max-width: 264px; min-height: 52px; text-align: center; text-decoration: cwrapArray[cwrapOmit, none,cwrapOmit]; width: 100%;"
               }
             }
           ]

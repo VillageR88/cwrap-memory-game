@@ -15,12 +15,14 @@ const resultsContainer = document.querySelector(
  */
 const generateBoard = ({
 	maskReference,
+	popupReference,
 	elementReferenceCollection,
 	elementDescriptionCollection,
 	gridButtonsNumber,
 	stopTimer,
 }: {
 	maskReference: HTMLDivElement;
+	popupReference: HTMLDivElement;
 	elementReferenceCollection?: HTMLDivElement[];
 	elementDescriptionCollection: HTMLParagraphElement[];
 	gridButtonsNumber: 16 | 36;
@@ -87,6 +89,7 @@ const generateBoard = ({
 									endTitle.textContent =
 										completePlayerCollection[0].key.concat(" Wins!");
 								else endTitle.textContent = "It’s a tie!";
+								popupReference.classList.remove("menu-only");
 								maskReference.style.opacity = "1";
 								maskReference.style.userSelect = "unset";
 								maskReference.style.pointerEvents = "unset";
@@ -149,6 +152,7 @@ const generateBoard = ({
 				resultDiv.appendChild(resultDescription);
 				resultsContainer.appendChild(resultDiv);
 			}
+			popupReference.classList.remove("menu-only");
 			maskReference.style.opacity = "1";
 			maskReference.style.userSelect = "unset";
 			maskReference.style.pointerEvents = "unset";
