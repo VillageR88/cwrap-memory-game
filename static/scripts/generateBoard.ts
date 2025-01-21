@@ -42,7 +42,9 @@ const generateBoard = ({
 		const randomIndex = Math.floor(Math.random() * boardClasses.length);
 		const currentClass = boardClasses.splice(randomIndex, 1)[0];
 		const boardButton = document.createElement("button");
+
 		boardButton.classList.add(currentClass);
+		boardButton.setAttribute("aria-label", `Button ${i + 1}`);
 		boardButton.addEventListener("click", (event) => {
 			resolveMove(
 				event,

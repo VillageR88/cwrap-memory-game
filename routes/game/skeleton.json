@@ -37,7 +37,7 @@
           "style": "font-size: 40px; max-width: 72px;"
         }
       ],
-      "style": "background-color: #304859; border-radius: 50%; box-sizing: border-box; color: #FCFCFC; flex-grow: 1; font-size: 56px; font-weight: bold; max-width: 118px; padding: 0; transition: 300ms;"
+      "style": "background-color: #304859; border-radius: 50%; box-sizing: border-box; color: transparent; flex-grow: 1; font-size: 56px; font-weight: bold; max-width: 118px; padding: 0; transition: 300ms;"
     },
     {
       "name": "body > main > div:nth-of-type(1).larger > button",
@@ -58,12 +58,12 @@
     {
       "name": "body > main > div:nth-of-type(1) > button.found",
       "type": "custom",
-      "style": "background-color: #BCCED9;"
+      "style": "background-color: #BCCED9; color: #FCFCFC;"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button.clicked",
       "type": "custom",
-      "style": "background-color: #FDA214; transition: 150ms;"
+      "style": "background-color: #FDA214; color: #FCFCFC; transition: 150ms;"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button",
@@ -73,7 +73,7 @@
     {
       "name": "body > main > div:nth-of-type(1) > button._1:before",
       "type": "custom",
-      "style": "color: white; content: \"1\";"
+      "style": "content: \"1\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._1:before",
@@ -83,7 +83,7 @@
     {
       "name": "body > main > div:nth-of-type(1) > button._2:before",
       "type": "custom",
-      "style": "color: white; content: \"2\";"
+      "style": "content: \"2\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._2:before",
@@ -93,162 +93,162 @@
     {
       "name": "body > main > div:nth-of-type(1) > button._3:before",
       "type": "custom",
-      "style": "color: white; content: \"3\";"
+      "style": "content: \"3\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._3:before",
       "type": "custom",
-      "style": "color: white; content: \"science\";"
+      "style": "content: \"science\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._4:before",
       "type": "custom",
-      "style": "color: white; content: \"4\";"
+      "style": "content: \"4\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._4:before",
       "type": "custom",
-      "style": "color: white; content: \"pan_tool\";"
+      "style": "content: \"pan_tool\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._5:before",
       "type": "custom",
-      "style": "color: white; content: \"5\";"
+      "style": "content: \"5\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._5:before",
       "type": "custom",
-      "style": "color: white; content: \"bug_report\";"
+      "style": "content: \"bug_report\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._6:before",
       "type": "custom",
-      "style": "color: white; content: \"6\";"
+      "style": "content: \"6\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._6:before",
       "type": "custom",
-      "style": "color: white; content: \"dark_mode\";"
+      "style": "content: \"dark_mode\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._7:before",
       "type": "custom",
-      "style": "color: white; content: \"7\";"
+      "style": "content: \"7\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._7:before",
       "type": "custom",
-      "style": "color: white; content: \"ac_unit\";"
+      "style": "content: \"ac_unit\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._8:before",
       "type": "custom",
-      "style": "color: white; content: \"8\";"
+      "style": "content: \"8\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._8:before",
       "type": "custom",
-      "style": "color: white; content: \"directions_car\";"
+      "style": "content: \"directions_car\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._9:before",
       "type": "custom",
-      "style": "color: white; content: \"9\";"
+      "style": "content: \"9\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._9:before",
       "type": "custom",
-      "style": "color: white; content: \"delete\";"
+      "style": "content: \"delete\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._10:before",
       "type": "custom",
-      "style": "color: white; content: \"10\";"
+      "style": "content: \"10\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._10:before",
       "type": "custom",
-      "style": "color: white; content: \"public\";"
+      "style": "content: \"public\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._11:before",
       "type": "custom",
-      "style": "color: white; content: \"11\";"
+      "style": "content: \"11\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._11:before",
       "type": "custom",
-      "style": "color: white; content: \"diamond\";"
+      "style": "content: \"diamond\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._12:before",
       "type": "custom",
-      "style": "color: white; content: \"12\";"
+      "style": "content: \"12\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._12:before",
       "type": "custom",
-      "style": "color: white; content: \"notifications\";"
+      "style": "content: \"notifications\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._13:before",
       "type": "custom",
-      "style": "color: white; content: \"13\";"
+      "style": "content: \"13\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._13:before",
       "type": "custom",
-      "style": "color: white; content: \"bolt\";"
+      "style": "content: \"bolt\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._14:before",
       "type": "custom",
-      "style": "color: white; content: \"14\";"
+      "style": "content: \"14\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._14:before",
       "type": "custom",
-      "style": "color: white; content: \"emoji_objects\";"
+      "style": "content: \"emoji_objects\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._15:before",
       "type": "custom",
-      "style": "color: white; content: \"15\";"
+      "style": "content: \"15\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._15:before",
       "type": "custom",
-      "style": "color: white; content: \"accessibility_new\";"
+      "style": "content: \"accessibility_new\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._16:before",
       "type": "custom",
-      "style": "color: white; content: \"16\";"
+      "style": "content: \"16\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._16:before",
       "type": "custom",
-      "style": "color: white; content: \"headphones\";"
+      "style": "content: \"headphones\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._17:before",
       "type": "custom",
-      "style": "color: white; content: \"17\";"
+      "style": "content: \"17\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._17:before",
       "type": "custom",
-      "style": "color: white; content: \"security\";"
+      "style": "content: \"security\";"
     },
     {
       "name": "body > main > div:nth-of-type(1) > button._18:before",
       "type": "custom",
-      "style": "color: white; content: \"18\";"
+      "style": "content: \"18\";"
     },
     {
       "name": "body > main > div:nth-of-type(1).icons > button._18:before",
       "type": "custom",
-      "style": "color: white; content: \"wifi\";"
+      "style": "content: \"wifi\";"
     }
   ],
   "element": "body",
