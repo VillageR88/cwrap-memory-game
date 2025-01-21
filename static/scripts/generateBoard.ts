@@ -87,8 +87,6 @@ const generateBoard = ({
 									endTitle.textContent =
 										completePlayerCollection[0].key.concat(" Wins!");
 								else endTitle.textContent = "It’s a tie!";
-
-								console.log("numberOfWinners", numberOfWinners);
 								maskReference.style.opacity = "1";
 								maskReference.style.userSelect = "unset";
 								maskReference.style.pointerEvents = "unset";

@@ -5,10 +5,17 @@ const createBottomElement = ({
 	name,
 	extended,
 }: { name: string; extended?: boolean }) => {
+	const isPlayerType = name.includes("Player");
 	const elementName = document.createElement("div");
 	const elementNameTitle = document.createElement("h2");
 	const elementNameDescription = document.createElement("p");
-	elementNameTitle.textContent = name;
+	if (isPlayerType) {
+		const middleSpan = document.createElement("span");
+		elementNameTitle.textContent = "P";
+		middleSpan.textContent = "layer ";
+		elementNameTitle.appendChild(middleSpan);
+		elementNameTitle.insertAdjacentText("beforeend", name[name.length - 1]);
+	} else elementNameTitle.textContent = name;
 	elementName.appendChild(elementNameTitle);
 	elementName.appendChild(elementNameDescription);
 	if (extended) {

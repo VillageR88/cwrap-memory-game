@@ -252,7 +252,13 @@
     }
   ],
   "element": "body",
-  "style": "align-items: center; background-color: #FCFCFC; box-sizing: border-box; display: flex; flex-direction: column; font-family: Atkinson Hyperlegible, serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 40px;",
+  "mediaQueries": [
+    {
+      "query": "max-width: 640px",
+      "style": "padding: 24px;"
+    }
+  ],
+  "style": "align-items: center; background-color: #FCFCFC; box-sizing: border-box; display: flex; flex-direction: column; font-family: Atkinson Hyperlegible, serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 37px 40px 48px 40px;",
   "children": [
     {
       "element": "nav",
@@ -269,6 +275,12 @@
             },
             {
               "element": "div",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 640px",
+                  "style": "display: none;"
+                }
+              ],
               "style": "display: flex; gap: 16px; max-width: 292px; width: 100%;",
               "children": [
                 {
@@ -340,6 +352,10 @@
           "query": "max-width: 920px",
           "extend": [
             {
+              "extension": "> div > svg",
+              "style": "fill: position: absolute; top: -16px;"
+            },
+            {
               "extension": "> div:has(svg)",
               "style": "align-items: unset; flex-direction: column;"
             },
@@ -350,19 +366,36 @@
             {
               "extension": "> div:has(svg) > p:nth-of-type(1)",
               "style": "font-size: 24px;"
+            },
+            {
+              "extension": "> div > span",
+              "style": "display: none;"
             }
-          ]
+          ],
+          "style": "gap: 11px; min-height: unset;"
         },
         {
           "query": "max-width: 640px",
           "extend": [
             {
               "extension": "> div",
-              "style": "flex-direction: column; justify-content: center; max-width: 151px; padding: 10px 31px;"
+              "style": "flex-direction: column; justify-content: center; max-width: 151px;"
+            },
+            {
+              "extension": "> div > svg",
+              "style": "fill: position: absolute; top: -10px;"
+            },
+            {
+              "extension": "> div:has(svg)",
+              "style": "align-items: center;"
             },
             {
               "extension": "> div > h2:nth-of-type(1)",
               "style": "font-size: 15px;"
+            },
+            {
+              "extension": "> div > h2:nth-of-type(1) > span",
+              "style": "display: none;"
             },
             {
               "extension": "> div > p:nth-of-type(1)",
